@@ -1,1 +1,0 @@
-using productdb as service from '../../srv/productdb';

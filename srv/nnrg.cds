@@ -1,14 +1,14 @@
-using { com.satinfotech.productdb as db } from '../db/schema';
-service productdb{
- entity People as projection on db.People{
+using { com.satinfotech.nnrg as db } from '../db/schema';
+service nnrg{
+ entity Product as projection on db.Product{
         @UI.Hidden: true
         ID,
         *
     };
 
 }
-annotate productdb.People with @odata.draft.enabled;
-annotate productdb.People with @(
+annotate nnrg.Product with @odata.draft.enabled;
+annotate nnrg.Product with @(
     UI.LineItem: [
         {
             $Type : 'UI.DataField',
@@ -33,7 +33,7 @@ annotate productdb.People with @(
         }
     ],  
 );
-annotate productdb.People with @(       
+annotate nnrg.Product with @(       
     UI.FieldGroup #ProductInformation : {
         $Type : 'UI.FieldGroupType',
         Data : [
@@ -75,7 +75,7 @@ annotate productdb.People with @(
         
     ],    
 );
-annotate productdb.People with {
+annotate nnrg.Product with {
     @Common.Text:'{Product}'
     @Core.IsURL:true
     @Core.MediaType:'image/jpg' 

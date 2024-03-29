@@ -1,7 +1,7 @@
-namespace com.satinfotech.productdb;
+namespace com.satinfotech.nnrg;
 using {managed, cuid } from '@sap/cds/common';
 
-entity People : cuid, managed {
+entity Product : cuid, managed {
     @title: 'ProductID'
     product_id: String;
     @title: 'Product Name'
